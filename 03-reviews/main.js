@@ -51,7 +51,7 @@ let currentItem = 0;
 //load initial item
 window.addEventListener("DOMContentLoaded", function () {
     showPerson(currentItem);
-})
+});
 
 //show person
 function showPerson(person) {
@@ -61,6 +61,7 @@ function showPerson(person) {
     job.textContent = item.job;
     info.textContent = item.text;
 }
+
 // next button function
 nextBtn.addEventListener('click',function(){
     currentItem++;
@@ -80,9 +81,11 @@ prevBtn.addEventListener('click',function(){
     }
     showPerson(currentItem);
 });
+
+//Randon button
 randomBtn.addEventListener('click',function(){
     currentItem = Math.floor(Math.random() * reviews.length);
     console.log(currentItem);
     showPerson(currentItem);
-})
+});
 
